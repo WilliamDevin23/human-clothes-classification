@@ -11,11 +11,16 @@ CLASSES = {
     2: "Civil Servant (Uniform)",
     3: "Military Camouflage",
     4: "Military Uniform",
-    5: "No Flag"
+    5: "No Flag",
+    6: "Police",
+    7: "Security"
 }
 
 model = tf.keras.models.load_model("model.keras")
 
+@app.get("/")
+def root():
+    return {"message": "API is alive"}
 
 @app.post("/upload-image/")
 async def upload_image(file: UploadFile = File(...)):
