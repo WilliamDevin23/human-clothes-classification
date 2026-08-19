@@ -1,0 +1,9 @@
+model.keras
+model (2).keras
+.git
+.fastapicloud
+__pycache__
+*.pyc
+.pytest_cache
+.venv
+venv
